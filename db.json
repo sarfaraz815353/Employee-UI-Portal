@@ -1,0 +1,104 @@
+{
+  "post": [],
+  "SignupUser": [
+    {
+      "FullName": "Owis",
+      "email": null,
+      "password": null,
+      "PhoneNumber": null,
+      "Gender": null,
+      "City": null,
+      "id": 1
+    },
+    {
+      "FullName": "Owis",
+      "email": null,
+      "password": null,
+      "PhoneNumber": null,
+      "Gender": null,
+      "City": null,
+      "id": 2
+    },
+    {
+      "FullName": "OWAIS ASHRAF",
+      "email": "owais@gmail.com",
+      "password": "123456",
+      "PhoneNumber": "6396014151",
+      "Gender": "Male",
+      "City": "Kolkata",
+      "id": 3
+    }
+  ],
+  "dashboard": [
+    {
+      "employeeid": null,
+      "fullname": null,
+      "emailid": null,
+      "mobileno": null,
+      "gender": null,
+      "salary": null,
+      "joiningdate": null,
+      "id": 1
+    },
+    {
+      "employeeid": 109,
+      "fullname": "Md owais",
+      "emailid": "owais@gmail.com",
+      "mobileno": "46661233",
+      "gender": "male",
+      "salary": 650000,
+      "joiningdate": "2023-05-10",
+      "id": 2
+    },
+    {
+      "employeeid": 131201,
+      "fullname": "sarfaraz",
+      "emailid": "sarfaraz@gmail.com",
+      "mobileno": "1234567847",
+      "gender": "male",
+      "salary": 250000,
+      "joiningdate": "2023-07-14",
+      "id": 3
+    },
+    {
+      "employeeid": null,
+      "fullname": null,
+      "emailid": null,
+      "mobileno": null,
+      "gender": null,
+      "salary": null,
+      "joiningdate": null,
+      "id": 4
+    },
+    {
+      "employeeid": null,
+      "fullname": null,
+      "emailid": null,
+      "mobileno": null,
+      "gender": null,
+      "salary": null,
+      "joiningdate": null,
+      "id": 5
+    },
+    {
+      "employeeid": 32,
+      "fullname": "sarfaraz",
+      "emailid": "sarfaraz@gmail.com",
+      "mobileno": "1234567891",
+      "gender": "male",
+      "salary": 80000,
+      "joiningdate": "2023-06-06",
+      "id": 6
+    },
+    {
+      "employeeid": null,
+      "fullname": null,
+      "emailid": null,
+      "mobileno": null,
+      "gender": null,
+      "salary": null,
+      "joiningdate": null,
+      "id": 7
+    }
+  ]
+}

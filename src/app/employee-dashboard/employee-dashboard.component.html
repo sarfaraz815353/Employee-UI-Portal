@@ -1,0 +1,112 @@
+
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <span>Employee Dashboard</span>
+    <span class="example-spacer"></span>
+    <button style="margin-right:10px" mat-raised-button color="warn"(click)="AddEmployee()">Add Employee</button>
+    <button mat-raised-button color="warn">Logout</button>
+</mat-toolbar>
+
+<!--<div class="container">
+    <form [formGroup]="employeeForm" class="form-box3">
+        <h3>Employee Details!!</h3>
+        <div class="form-group">
+            <label>Employee ID: </label>
+            <input type="number" formControlName="employeeid" class="form-control-mb-3-mt-3" placeholder="Enter Employee ID">
+        </div>
+        <div class="form-group">
+            <label>FullName:</label>
+            <input type="text" formControlName="fullname" class="form-control-mb-3-mt-3" placeholder="Enter Employee Name">
+        </div>
+        <div class="form-group">
+           <label>Email ID: </label>
+           <input type="email" formControlName="emailid" class="form-control-mb-3-mt-3" placeholder="Enter Email ID">
+        </div>
+        <div class="form-group">
+            <label>Mobile No. : </label>
+            <input type="mobile"  formControlName="mobileno"class="form-control-mb-3-mt-3" placeholder="Enter Mobile Number">
+         </div>
+         <div class="form-group">
+            <label>Gender :</label>
+            <input type="radio" formControlName="gender" id="male" value="male" class="form-control-mb-3-mt-3">Male
+            <input type="radio"  formControlName="gender" id="female" value="female" class="form-control-mb-3-mt-3">Female
+         </div>
+         <div class="form-group">
+            <label>Salary : </label>
+            <input type="number" formControlName="salary"class="form-control-mb-3-mt-3" placeholder="Enter Salary in INR">
+         </div>
+         <div class="form-group">
+            <label>Joining Date : </label>
+            <input type="date" formControlName="joiningdate" class="form-control-mb-3-mt-3" placeholder="Enter Joining Date">
+         </div>
+         <br>
+         <button input type="submit" class="btn btn-sucess">Save</button>
+    </form>
+</div>-->
+<div class="container">
+  <div style="margin-top:10px">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> employeeid </th>
+        <td mat-cell *matCellDef="let row"> {{row.employeeid}} </td>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="progress">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> fullname </th>
+        <td mat-cell *matCellDef="let row"> {{row.fullname}}% </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> emailid </th>
+        <td mat-cell *matCellDef="let row"> {{row.emailid}} </td>
+      </ng-container>
+  
+      <!-- Fruit Column -->
+      <ng-container matColumnDef="fruit">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> mobileno </th>
+        <td mat-cell *matCellDef="let row"> {{row.mobileno}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fruit">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> gender </th>
+        <td mat-cell *matCellDef="let row"> {{row.gender}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fruit">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> salary </th>
+        <td mat-cell *matCellDef="let row"> {{row.salary}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fruit">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> joiningdate </th>
+        <td mat-cell *matCellDef="let row"> {{row.joiningdate}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+  </div>
+  </div>
+  </div>
+<router-outlet></router-outlet>

@@ -1,0 +1,42 @@
+<div class="container">
+	<form [formGroup]="signupForm" (ngSubmit)="signupdata(signupForm)" class= "form-box1" >
+		<h3>Signup !!</h3>
+		<div class="form-group">
+			<label >Full Name</label>
+			<input type="text" formControlName="FullName" class="form-control-mb-3-mt-3" placeholder="Enter Full Name">
+		</div>
+		<div class="form-group">
+			<label>Email ID</label>
+			<input type="email" formControlName="email"  class="form-control-mb-3-mt-3 place" placeholder="Enter Email Address">
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" formControlName="password" class="form-control-mb-3-mt-3" placeholder="Enter password">
+		</div>
+		<div class="form-group">
+		<label>Mobile No.</label>
+		<input type="mobile" formControlName="PhoneNumber" class="form-control-mb-3-mt-3" placeholder="Enter Mobile Number">
+	   </div>
+	   <div class="form-group">
+		<label>Gender</label>
+		<input type="radio" formControlName="Gender" id="Male" value="Male" class="form-control-mb-3-mt-3" >Male 
+		<input type="radio" formControlName="Gender" id="Female" value="Female" class="form-control-mb-3-mt-3" >Female
+		<!--<input type="radio" formControlName="Gender" id="Other" value="O" class="form-control-mb-3-mt-3" >Other -->
+	   </div>
+	   
+	   <div class="formGroup">
+		<label>City</label>
+		<select id="City" formControlName="City">
+			<option>Select</option>
+			<option>Bangalore</option>
+			<option>Mumbai</option>
+			<option>Kolkata</option>
+			<option>Other</option>
+		</select>
+	   </div>
+	   <span>You Have Already Account <a [routerLink]="['/login']">login </a></span>
+	   <br/>
+		<button type="submit" class="btn btn-success">signup</button>
+	</form>
+</div>
+<router-outlet></router-outlet> 
